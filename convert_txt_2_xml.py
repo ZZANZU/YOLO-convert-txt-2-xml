@@ -9,13 +9,13 @@ import os
 # Ref : http://leechoong.com/posts/2018/ds_store/
 # (필독2)
 # 각자 환경에 맞게 경로 설정하세요.
-IMG_PATH = "/Users/zzanzu/Desktop/Dev/PetPeoTalk/YOLO/model_files/train-data/190801/img"
+IMG_PATH = "YOUR_IMG_FOLDER_PATH"
 fw = os.listdir(IMG_PATH)
 # path of save xml file
-save_path = '/Users/zzanzu/Desktop/Dev/PetPeoTalk/YOLO/model_files/train-data/'
+save_path = '' # keep it blank
 
 # txt_folder is txt file root that using darknet rectbox
-txt_folder = '/Users/zzanzu/Desktop/Dev/PetPeoTalk/YOLO/model_files/train-data/190801/annotation'
+txt_folder = 'YOUR_TXT_FOLDER_PATH'
 
 # 라벨 수정
 labels = ['dog_two_stand', 'dog_four_stand', 'dog_sit', 'dog_lying']
