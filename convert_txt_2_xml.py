@@ -3,17 +3,22 @@ from PIL import Image
 import csv
 import os
 
-# (필독)각자 환경에 맞게 경로 설정.
-IMG_PATH = "YOUR_IMGAGE_FOLDER_PATH"
+# (필독1)
+# 맥 사용자의 경우 .DS_Store 파일이 폴더 내에 자동으로 생성되어있는 경우가 있습니다.
+# 이 경우 맥 터미널을 통해 .DS_Store 파일을 삭제해야합니다.
+# Ref : http://leechoong.com/posts/2018/ds_store/
+# (필독2)
+# 각자 환경에 맞게 경로 설정하세요.
+IMG_PATH = "/Users/zzanzu/Desktop/Dev/PetPeoTalk/YOLO/model_files/train-data/190801/img"
 fw = os.listdir(IMG_PATH)
 # path of save xml file
-save_path = 'CONVERTED_XML_PATH'
+save_path = '/Users/zzanzu/Desktop/Dev/PetPeoTalk/YOLO/model_files/train-data/'
 
 # txt_folder is txt file root that using darknet rectbox
-txt_folder = 'YOUR_TXT_FOLDER_PATH'
+txt_folder = '/Users/zzanzu/Desktop/Dev/PetPeoTalk/YOLO/model_files/train-data/190801/annotation'
 
 # 라벨 수정
-labels = ['LABEL1', 'LABEL2', 'LABEL3']
+labels = ['dog_two_stand', 'dog_four_stand', 'dog_sit', 'dog_lying']
 global label
 label = ''
 
@@ -63,9 +68,11 @@ for line in fw:
     img_name = line
     image_info = IMG_PATH + "/" + line
     img_txt_root = txt_folder + "/" + line[:-4]
+    # print(img_txt_root)
     txt = ".txt"
 
     txt_path = img_txt_root + txt
+    # print(txt_path)
     txt_file = csvread(txt_path)
     ######################################
 
