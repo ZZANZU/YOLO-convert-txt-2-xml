@@ -3,12 +3,12 @@ from PIL import Image
 import csv
 import os
 
-# (필독1)
-# 맥 사용자의 경우 .DS_Store 파일이 폴더 내에 자동으로 생성되어있는 경우가 있습니다.
-# 이 경우 맥 터미널을 통해 .DS_Store 파일을 삭제해야합니다.
+# (NOTICE #1)
+# If you're OS is Mac, there's a case when '.DS_Store' file is  automatically created.
+# In that case, you have to remove '.DS_Store' file through the terminal.
 # Ref : http://leechoong.com/posts/2018/ds_store/
-# (필독2)
-# 각자 환경에 맞게 경로 설정하세요.
+# (NOTICE #2)
+# Change this path variable
 IMG_PATH = "YOUR_IMG_FOLDER_PATH"
 fw = os.listdir(IMG_PATH)
 # path of save xml file
@@ -17,7 +17,8 @@ save_path = '' # keep it blank
 # txt_folder is txt file root that using darknet rectbox
 txt_folder = 'YOUR_TXT_FOLDER_PATH'
 
-# 라벨 수정
+# (NOTICE #3)
+# Change this labels
 labels = ['dog_two_stand', 'dog_four_stand', 'dog_sit', 'dog_lying']
 global label
 label = ''
