@@ -36,7 +36,7 @@ def csvread(fn):
 def convert_label(txt_file):
     global label
     for i in range(len(labels)):
-        if txt_file[0] == str(i):
+        if txt_file == str(i):
             label = labels[i]
             return label
 
